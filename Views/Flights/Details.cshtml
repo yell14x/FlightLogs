@@ -1,0 +1,74 @@
+﻿@model FlightLogs.Models.Model_Flights
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Flight Details</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.Raw("Number")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.flight_id)
+            </dd>
+
+            <dt>
+                @Html.Raw("Pilot Name")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PilotName)
+            </dd>
+
+            <dt>
+                @Html.Raw("Flight Code")
+            </dt>
+
+            <dd>
+                @Html.DisplayNameFor(model => model.Flight1)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Schedule)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Schedule)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Origin)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Origin)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Destination)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Destination)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.flight_id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
